@@ -5586,6 +5586,11 @@ declare interface Output {
 	chunkLoadTimeout?: number;
 
 	/**
+	 * The method of loading chunks (methods included by default are 'jsonp' (web), 'importScripts' (WebWorker), 'require' (sync node.js), 'async-node' (async node.js), but others might be added by plugins).
+	 */
+	chunkLoading?: string;
+
+	/**
 	 * The global variable used by webpack for loading of chunks.
 	 */
 	chunkLoadingGlobal?: string;
@@ -5798,6 +5803,11 @@ declare interface OutputNormalized {
 	 * Number of milliseconds before chunk request expires.
 	 */
 	chunkLoadTimeout?: number;
+
+	/**
+	 * The method of loading chunks (methods included by default are 'jsonp' (web), 'importScripts' (WebWorker), 'require' (sync node.js), 'async-node' (async node.js), but others might be added by plugins).
+	 */
+	chunkLoading?: string;
 
 	/**
 	 * The global variable used by webpack for loading of chunks.
