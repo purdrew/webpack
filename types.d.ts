@@ -5581,6 +5581,11 @@ declare interface Output {
 	chunkLoadTimeout?: number;
 
 	/**
+	 * The global variable used by webpack for loading of chunks.
+	 */
+	chunkLoadingGlobal?: string;
+
+	/**
 	 * Check if to be emitted file already exists and have the same content before writing to output filesystem.
 	 */
 	compareBeforeEmit?: boolean;
@@ -5651,9 +5656,9 @@ declare interface Output {
 	hotUpdateChunkFilename?: string;
 
 	/**
-	 * The JSONP function used by webpack for async loading of hot update chunks.
+	 * The global variable used by webpack for loading of hot update chunks.
 	 */
-	hotUpdateFunction?: string;
+	hotUpdateGlobal?: string;
 
 	/**
 	 * The filename of the Hot Update Main File. It is inside the `output.path` directory.
@@ -5669,11 +5674,6 @@ declare interface Output {
 	 * The name of the native import() function (can be exchanged for a polyfill).
 	 */
 	importFunctionName?: string;
-
-	/**
-	 * The JSONP function used by webpack for async loading of chunks.
-	 */
-	jsonpFunction?: string;
 
 	/**
 	 * Make the output files a library, exporting the exports of the entry point.
@@ -5795,6 +5795,11 @@ declare interface OutputNormalized {
 	chunkLoadTimeout?: number;
 
 	/**
+	 * The global variable used by webpack for loading of chunks.
+	 */
+	chunkLoadingGlobal?: string;
+
+	/**
 	 * Check if to be emitted file already exists and have the same content before writing to output filesystem.
 	 */
 	compareBeforeEmit?: boolean;
@@ -5865,9 +5870,9 @@ declare interface OutputNormalized {
 	hotUpdateChunkFilename?: string;
 
 	/**
-	 * The JSONP function used by webpack for async loading of hot update chunks.
+	 * The global variable used by webpack for loading of hot update chunks.
 	 */
-	hotUpdateFunction?: string;
+	hotUpdateGlobal?: string;
 
 	/**
 	 * The filename of the Hot Update Main File. It is inside the `output.path` directory.
@@ -5883,11 +5888,6 @@ declare interface OutputNormalized {
 	 * The name of the native import() function (can be exchanged for a polyfill).
 	 */
 	importFunctionName?: string;
-
-	/**
-	 * The JSONP function used by webpack for async loading of chunks.
-	 */
-	jsonpFunction?: string;
 
 	/**
 	 * Options for library.
